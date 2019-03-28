@@ -10,7 +10,7 @@ namespace HexToIP
 {
     class ProcNetTcpConverter
     {
-        static string filePath = @"C:\Users\VRC Black - Red\Desktop\GetTcpConnections.bat";
+        static string filePath = @"";
         static readonly string header = string.Format("{0, 5} {1, 20} {2, 20} {3, 5} {4, 5} {5} {6} {7, 5} {8} {9, 5} {10, 10} {11, 7}", "sl", "local_address", "rem_address", "st", "tx_queue", "rx_queue", "tr", "tm->when", "retrnsmt", "uid", "timeout", "inode");
 
         static void Main(string[] args)
