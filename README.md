@@ -1,8 +1,7 @@
-# proc-net-tcp-to-decimal
-Simple C# script that converts the IP address output from proc/net/tcp from hexadecimal notation to decimal
+# proc-net-tcp-assistant
 
-ProcNetTcp.bat relies on having `\Android\sdk\platform-tools\` in your "Path" environment variables to execute "adb.exe" from anywhere. If platform-tools is not added to your envornment variables either add it, or supply "adb.exe" with a path inside ProcNetTcp.bat.
+ProcNetTcp assistant will take the output of `adb.exe shell cat /proc/net/tcp` from any connected (Android) device and convert the standard hex notation of ipv4 addresses:ports to decimal for easier readability at a glance. The assistant will also convert the status code to its string value.
 
-if `filePath` is not set inside ProcNetTcpConverter.cs it will promp the user to manually input the full ProcNetTcp.bat path. 
-e.g: C:\Dev\Batch\ProcNetTcp.bat.
-Note that `filePath` takes a literal string and doesn't need to have its slashes escaped.
+Add ipv4 addresses to `ipFilters` to filter out matching entries. These addresses can either be hard coded or provided upon launch.
+
+Note that `ProcNetTcp.bat` expects `adb.exe` to be added to the environment variables. If this is not the case you need to provide the full path for `adb.exe` in `ProcNetTcp.bat`
